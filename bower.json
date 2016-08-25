@@ -6,6 +6,11 @@
     "bower_components",
     "output"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paf31/purescript-taylor.git"
+  },
   "dependencies": {
     "purescript-lists": "^1.0.1"
   },
