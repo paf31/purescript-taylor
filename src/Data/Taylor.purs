@@ -18,12 +18,12 @@ import Data.Maybe (Maybe(..), fromJust)
 import Partial.Unsafe (unsafePartial)
 
 -- | A Taylor series, with coefficients in the specified `Semiring`.
---
--- By varying the base `Semiring`, we can do various interesting things:
---
--- * Using `Number`, we can compute arbitrary higher order derivatives of functions.
--- * Using `Complex`, we can compute path derivatives of functions.
--- * Using the `Free` `Semiring`, we can implement symbolic differentiation.
+-- |
+-- | By varying the base `Semiring`, we can do various interesting things:
+-- |
+-- | * Using `Number`, we can compute arbitrary higher order derivatives of functions.
+-- | * Using `Complex`, we can compute path derivatives of functions.
+-- | * Using the `Free` `Semiring`, we can implement symbolic differentiation.
 newtype Taylor a = Taylor (List a)
 
 -- | Extract the coefficients as a lazy list.
