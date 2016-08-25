@@ -1,0 +1,16 @@
+{
+  "name": "purescript-taylor",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-lists": "^1.0.1"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^1.0.0",
+    "purescript-rationals": "^0.4.0"
+  }
+}
