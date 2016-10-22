@@ -52,8 +52,8 @@ integrate (Taylor cs) = Taylor (zero : zipWith div cs powers) where
 x :: forall a. Semiring a => Taylor a
 x = Taylor (zero : one : repeat zero)
 
-instance functorTaylor :: Functor Taylor where
-  map f (Taylor cs) = Taylor (map f cs)
+derive newtype instance lazyTaylor :: Lazy (Taylor a)
+derive newtype instance functorTaylor :: Functor Taylor
 
 instance semiringTaylor :: Semiring a => Semiring (Taylor a) where
   zero = Taylor (repeat zero)
@@ -86,7 +86,4 @@ instance euclideanRing :: (Eq a, Field a) => EuclideanRing (Taylor a) where
 
   mod _ _ = zero
 
-instance fieldRing :: (Eq a, Field a) => Field (Taylor a) where
-
-instance lazyTaylor :: Lazy (Taylor a) where
-  defer f = Taylor (defer \u -> coefficients (f u))
+instance fieldRing :: (Eq a, Field a) => Field (Taylor a)

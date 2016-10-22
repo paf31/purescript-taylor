@@ -12,10 +12,10 @@
     "url": "git://github.com/paf31/purescript-taylor.git"
   },
   "dependencies": {
-    "purescript-lists": "^1.0.1"
+    "purescript-lists": "^3.0.0"
   },
   "devDependencies": {
-    "purescript-psci-support": "^1.0.0",
-    "purescript-rationals": "^0.4.0"
+    "purescript-psci-support": "^2.0.0",
+    "purescript-rationals": "^2.0.0"
   }
 }
