@@ -70,7 +70,7 @@ instance semiringTaylor :: Semiring a => Semiring (Taylor a) where
 instance ringTaylor :: Ring a => Ring (Taylor a) where
   sub (Taylor cs1) (Taylor cs2) = Taylor (zipWith sub cs1 cs2)
 
-instance commutativeRingRing :: CommutativeRing a => CommutativeRing (Taylor a) where
+instance commutativeRingRing :: CommutativeRing a => CommutativeRing (Taylor a)
 
 instance euclideanRing :: (Eq a, Field a) => EuclideanRing (Taylor a) where
   degree _ = 1
@@ -85,5 +85,3 @@ instance euclideanRing :: (Eq a, Field a) => EuclideanRing (Taylor a) where
                            in coefficients ((t1 - t2) / t))
 
   mod _ _ = zero
-
-instance fieldRing :: (Eq a, Field a) => Field (Taylor a)

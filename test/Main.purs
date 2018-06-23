@@ -2,13 +2,13 @@ module Test.Main where
 
 import Prelude
 import Control.Lazy (fix)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE, log, logShow)
 import Data.List (fromFoldable)
 import Data.List.Lazy (take)
 import Data.Taylor (coefficients, integrate, constant, d, x)
+import Effect (Effect)
+import Effect.Console (log, logShow)
 
-main :: forall e. Eff (console :: CONSOLE | e) Unit
+main :: Effect Unit
 main = do
   let series = constant 1.0 + x * x
 

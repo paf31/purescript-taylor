@@ -24,7 +24,6 @@ Functor Taylor
 (Ring a) => Ring (Taylor a)
 (CommutativeRing a) => CommutativeRing (Taylor a)
 (Eq a, Field a) => EuclideanRing (Taylor a)
-(Eq a, Field a) => Field (Taylor a)
 ```
 
 #### `coefficients`
@@ -43,13 +42,13 @@ constant :: forall a. Semiring a => a -> Taylor a
 
 A Taylor series representing a constant function.
 
-#### `eval0`
+#### `x`
 
 ``` purescript
-eval0 :: forall a. Taylor a -> a
+x :: forall a. Semiring a => Taylor a
 ```
 
-Evaluate a Taylor series at zero.
+A Taylor series which has a non-zero coefficient only for the x term.
 
 #### `d`
 
@@ -67,12 +66,12 @@ integrate :: forall a. Field a => Taylor a -> Taylor a
 
 The integral of a Taylor series.
 
-#### `x`
+#### `eval0`
 
 ``` purescript
-x :: forall a. Semiring a => Taylor a
+eval0 :: forall a. Taylor a -> a
 ```
 
-A Taylor series which has a non-zero coefficient only for the x term.
+Evaluate a Taylor series at zero.
 
 
